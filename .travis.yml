@@ -9,4 +9,4 @@ install:
   - make build
 
 script:
-  - test $(docker run --rm -it waja/bombardier --help | head -1 | cut -d' ' -f2 | xargs basename) = "bombardier"
+  - make test
