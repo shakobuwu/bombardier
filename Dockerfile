@@ -3,7 +3,7 @@ FROM alpine:3.7
 # Dockerfile Maintainer
 MAINTAINER Jan Wagner "waja@cyconet.org"
 
-ENV BOMBARDIER_VERSION v1.1
+ENV BOMBARDIER_VERSION v1.1.1
 ENV UPSTREAM github.com/codesenberg/bombardier
 
 ENV GOROOT /usr/lib/go
