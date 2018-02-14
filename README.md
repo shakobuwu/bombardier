@@ -1,5 +1,7 @@
 # Docker-Bombardier
 
+[![](https://images.microbadger.com/badges/version/waja/bombardier.svg)](https://hub.docker.com/r/waja/bombardier/)
+[![](https://images.microbadger.com/badges/image/waja/bombardier.svg)](https://hub.docker.com/r/waja/bombardier/)
 [![Build Status](https://travis-ci.org/Cyconet/docker-bombardier.svg?branch=development)](https://travis-ci.org/Cyconet/docker-bombardier)
 [![Docker Build Status](https://img.shields.io/docker/build/waja/bombardier.svg)](https://hub.docker.com/r/waja/bombardier/)
 [![GitHub tag](https://img.shields.io/github/tag/Cyconet/docker-bombardier.svg)](https://github.com/Cyconet/docker-bombardier/tags)
