@@ -12,7 +12,8 @@ ENV GOBIN /gopath/bin
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
 
 # Install dependencies for building httpdiff 
-RUN apk --no-cache add ca-certificates && \
+RUN apk --no-cache update && apk --no-cache upgrade && \
+ apk --no-cache add ca-certificates && \
  apk --no-cache add --virtual build-dependencies curl git go musl-dev && \
  # Install bombardier client
  echo "Starting installing bombardier." && \
