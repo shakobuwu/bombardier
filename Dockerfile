@@ -1,26 +1,6 @@
-FROM alpine:3.7
+FROM alpine
 
-# Dockerfile Maintainer
-MAINTAINER Jan Wagner "waja@cyconet.org"
-
-ARG "BUILD_DATE=unknown"
-ARG "BUILD_VERSION=unknown"
-ARG "VCS_URL=unknown"
-ARG "VCS_REF=unknown"
-ARG "VCS_BRANCH=unknown"
-
-# See http://label-schema.org/rc1/ and https://microbadger.com/labels
-LABEL org.label-schema.name="bombardier - HTTP(S) benchmarking tool" \
-    org.label-schema.description="Fast cross-platform HTTP benchmarking tool on Alpine Linux based container" \
-    org.label-schema.vendor="Cyconet" \
-    org.label-schema.schema-version="1.0" \
-    org.label-schema.build-date=$BUILD_DATE \
-    org.label-schema.version=$BUILD_VERSION \
-    org.label-schema.vcs-url=$VCS_URL \
-    org.label-schema.vcs-ref=$VCS_REF \
-    org.label-schema.vcs-branch=$VCS_BRANCH
-
-ENV BOMBARDIER_VERSION v1.1.1
+ARG VERSION
 ENV UPSTREAM github.com/codesenberg/bombardier
 
 ENV GOROOT /usr/lib/go
@@ -39,5 +19,5 @@ RUN apk --no-cache update && apk --no-cache upgrade && \
  go install $UPSTREAM && \
  apk del build-dependencies
 
-ENTRYPOINT ["/gopath/bin/bombardier"]
-#CMD [""]
+ENTRYPOINT ["bombardier"]
+CMD ["--help"]
