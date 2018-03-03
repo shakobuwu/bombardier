@@ -15,7 +15,7 @@ RUN apk --no-cache update && apk --no-cache upgrade && \
  # Install bombardier client
  echo "Starting installing bombardier." && \
  go get -d $UPSTREAM && \
- cd $GOPATH/src/$UPSTREAM/ && git checkout $BOMBARDIER_VERSION && \
+ cd $GOPATH/src/$UPSTREAM/ && git checkout $VERSION && \
  go install $UPSTREAM && \
  apk del build-dependencies
 
