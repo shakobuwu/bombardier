@@ -1,12 +1,23 @@
-# alpine/Bombardier
+# alpine/bombardier
 
 Auto trigger with latest release and build a docker image with the [bombardier](https://github.com/codesenberg/bombardier) ready to run.
 
+### Repo:
+
+https://github.com/alpine-docker/flake8
+
+### Daily build logs:
+
+https://travis-ci.org/alpine-docker/flake8
+
+### Docker iamge tags:
+
+https://hub.docker.com/r/alpine/bombardier/tags/
 
 ### Running
 
 ```
-docker run --rm -it alpine/bombardier --help 
+docker run --rm -it alpine/bombardier --help
 ```
 
 ### The Processes to build this image
