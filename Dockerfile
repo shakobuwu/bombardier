@@ -13,7 +13,7 @@ RUN apk --no-cache update && apk --no-cache upgrade && \
  apk --no-cache add ca-certificates && \
  apk --no-cache add --virtual build-dependencies curl git go musl-dev && \
  # Install bombardier client
- echo "Starting installing bombardier." && \
+ echo "Starting installing bombardier $VERSION." && \
  go get -d $UPSTREAM && \
  cd $GOPATH/src/$UPSTREAM/ && git checkout $VERSION && \
  go install $UPSTREAM && \
