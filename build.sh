@@ -15,7 +15,7 @@ Usage() {
 image="alpine/bombardier"
 repo="codesenberg/bombardier"
 
-latest=`curl -sL -H "Authorization: token ${API_TOKEN}"  https://api.github.com/repos/${repo}/tags |jq -r ".[].name"|head -1|sed 's/^v//'`
+latest=`curl -sL -H "Authorization: token ${API_TOKEN}"  https://api.github.com/repos/${repo}/tags |jq -r ".[].name"|head -1`
 sum=0
 echo "Lastest release is: ${latest}"
 
